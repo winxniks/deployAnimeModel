@@ -1,0 +1,6 @@
+data/
+*.md
+local_processing.py
+.git
+.deployAnimeModel-venv
+__pycache__
