@@ -25,14 +25,16 @@ app.add_middleware(
 model = load_model()
 
 # Маршрут для проверки работоспособности сервиса
-@app.get("/", tags=["Health Check"])
+@app.get("/health", 
+         summary="Проверить доступность сервиса",
+         tags=["Health Check"])
 def read_root():
     return {"message": "Image to Anime is running!"}
 
 
 # Основной маршрут для получения рекомендаций
 @app.post(
-    "/api/generate/",
+    "/api/generate",
     summary="Наложить на изображение аниме стиль",
     description="Принимает изображение, пропускает его через модель и возвращает преобразованное изображение в аниме-стиле.",
     tags=["Generation"],

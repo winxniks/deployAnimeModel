@@ -2,9 +2,7 @@ import torch
 import torchvision.transforms as transforms
 from PIL import Image
 import os
-#from pathlib import Path
 
-# Device configuration
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
